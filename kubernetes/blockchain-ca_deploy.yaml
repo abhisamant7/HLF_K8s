@@ -10,7 +10,7 @@ spec:
         name: dfarmadmin-ca
     spec:
       volumes:
-      - name: fabricfiles
+      - name: fabricretailfiles
         persistentVolumeClaim:
           claimName:  efs-volume-claim
 
@@ -40,8 +40,8 @@ spec:
         - name: GODEBUG
           value: "netdns=go"
         volumeMounts:
-        - name: fabricfiles
+        - name: fabricretailfiles
           mountPath: /fabric
         # - mountPath: /fabric/crypto-config/peerOrganizations/dfarmadmin/ca
-        #   name: fabricfiles
+        #   name: fabricretailfiles
           # subPath: /crypto-config/peerOrganizations/dfarmadmin/ca

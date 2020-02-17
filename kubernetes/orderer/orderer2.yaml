@@ -19,7 +19,7 @@ spec:
         type: orderer
     spec:
       volumes:
-        - name: fabricfiles
+        - name: fabricretailfiles
           persistentVolumeClaim:
             claimName: efs-volume-claim
       containers:
@@ -74,5 +74,5 @@ spec:
             value: /fabric/crypto-config/ordererOrganizations/default.svc.cluster.local/orderers/orderer2.default.svc.cluster.local/tls/ca.crt
           volumeMounts:
             - mountPath: /fabric
-              name: fabricfiles
+              name: fabricretailfiles
         

@@ -13,7 +13,7 @@ spec:
         name: orderer
     spec:
       volumes:
-      - name: fabricfiles
+      - name: fabricretailfiles
         persistentVolumeClaim:
           claimName: efs-volume-claim
 
@@ -72,4 +72,4 @@ spec:
           value: "ram"
         volumeMounts:
         - mountPath: /fabric
-          name: fabricfiles
+          name: fabricretailfiles

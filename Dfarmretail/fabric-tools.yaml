@@ -4,7 +4,7 @@ metadata:
   name: fabric-tools
 spec:
   volumes:
-  - name: fabricfiles
+  - name: fabricretailfiles
     persistentVolumeClaim:
       claimName: efs-volume-claim
   - name: dockersocket
@@ -22,6 +22,6 @@ spec:
         value: "/fabric"
       volumeMounts:
         - mountPath: /fabric
-          name: fabricfiles
+          name: fabricretailfiles
         - mountPath: /host/var/run/docker.sock
           name: dockersocket
